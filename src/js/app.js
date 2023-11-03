@@ -4,9 +4,8 @@ export default  class Validator {
   }
 
   validateUsername() {
-    if(/ \w | [0-9] | - /.test(nikname)) {
-      return true;
-    }
-    else return false;
+    return (/^([a-z]+\d{0,3}[a-z]+)$/i.test(this.nikname));
   }
 }
+
+
